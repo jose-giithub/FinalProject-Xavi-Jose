@@ -1,0 +1,116 @@
+body {
+    /* background-color: aliceblue; */
+    background-color: blue;
+    font-family: Tahoma;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ figure {
+    position: relative;
+    /* Importante para el posicionamiento absoluto de los hijos */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    margin: auto;
+    height: 400px;
+    overflow: hidden;
+    /* Asegura que nada se salga del contenedor */
+}
+
+figure img {
+    width: 100%;
+    /* Ajustado al 100% del contenedor */
+    height: 100%;
+    /* Ajustado al 100% del contenedor */
+    object-fit: cover;
+}
+
+#divIconoFotoPortada {
+    height: 40px;
+    width: 180px;
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    background-color: rgba(255, 255, 255, 0.5);
+    color: white;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    /* Si el div es interactivo */
+}
+
+#iconoCamara {
+    color: #050505;
+    font-size: 25px;
+}
+
+#divIconoFotoPortada span {
+    margin-left: 15px;
+    color: #050505;
+    font-size: 15px;
+}
+
+/* Ajustes responsivos para pantallas más pequeñas */
+@media (max-width: 768px) {
+
+    .logo-container {
+        width: 100%;
+        /* Ocupa el ancho completo para el logo */
+        margin-bottom: 10px;
+        /* Espacio después del logo */
+    }
+
+    .navigation {
+        flex-direction: column;
+    }
+
+    .user-image-container {
+        width: 100%;
+        /* Hace que el contenedor de la imagen de usuario ocupe el ancho completo */
+        display: flex;
+        justify-content: center;
+        margin-top: 10px;
+        /* Espacio antes del contenedor de imagen de usuario */
+    }
+
+    figure {
+        flex-direction: column;
+        height: auto;
+        /* Ajusta la altura para adaptarse al nuevo layout */
+    }
+
+    figure img,
+    #divIconoFotoPortada {
+        width: 100%;
+        /* Asegura que ocupen todo el ancho disponible */
+        justify-content: center;
+        /* No tiene efecto en estos elementos */
+    }
+
+    #divIconoFotoPortada {
+        width: auto;
+        height: auto;
+        right: auto;
+        /* Deshace la posición absoluta a la derecha */
+        bottom: 10px;
+        /* Menor espacio desde el borde inferior */
+        padding: 7.5px;
+        /* Reducción de padding */
+        font-size: 5px;
+        /* Ajuste del tamaño de fuente para texto */
+    }
+
+    #iconoCamara {
+        font-size: 15px;
+        /* Hacer el ícono más pequeño */
+    }
+
+    #divIconoFotoPortada span {
+        width: auto;
+        font-size: 15px;
+    }
+}

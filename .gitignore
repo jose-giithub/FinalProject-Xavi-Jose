@@ -1,0 +1,89 @@
+# Directorios generados automáticamente
+/node_modules
+
+/storage/*.key
+/vendor
+
+
+# Archivos de respaldo y caché
+/.phpunit.result.cache
+/.phpunit.cache
+/bootstrap/cache
+/logs
+/nbproject
+/tests/Browser/console
+/tests/Browser/screenshots
+/tests/Browser/videos
+
+# Archivos de compilación
+Homestead.json
+Homestead.yaml
+npm-debug.log
+yarn-error.log
+node_modules/.vite/deps/_metadata.json
+node_modules/.vite/deps/alpinejs.js
+node_modules/.vite/deps/alpinejs.js.map
+node_modules/.vite/deps/axios.js
+node_modules/.vite/deps/axios.js.map
+node_modules/.vite/deps/chunk-CSAU5B4Q.js
+node_modules/.vite/deps/package.json
+public/storage/carrusel/7HihjVPN4WlZZf2TI6BxuRzA3PsnPImq41qIltdQ.png
+public/storage/carrusel/CytgY685BBUsJYWxq7zyIxHEwu5GqaFFxihsGHsq.jpg
+public/storage/images/fotoPortadaRandom.png
+node_modules/@rollup/rollup-win32-x64-msvc/rollup.win32-x64-msvc.node
+public/hot
+/public/storage
+/.phpunit.cache
+/node_modules
+/public/build
+/public/hot
+/public/storage
+/storage/*.key
+/vendor
+.env
+.env.backup
+.env.production
+.phpunit.result.cache
+Homestead.json
+Homestead.yaml
+auth.json
+npm-debug.log
+yarn-error.log
+/.fleet
+/.idea
+/.vscode
+# Archivos de configuración del entorno
+.env
+.env.backup
+.env.production
+auth.json
+
+# Directorios de dependencias
+/vendor
+/node_modules
+
+# Directorios de almacenamiento y caché
+/storage/*.key
+/bootstrap/cache
+/public/storage
+/public/build
+/public/hot
+
+# Archivos de logs y debugging
+*.log
+npm-debug.log
+yarn-error.log
+.phpunit.result.cache
+
+# Archivos de datos de prueba
+/tests/Browser/screenshots
+/tests/Browser/videos
+
+# Configuraciones de herramientas de desarrollo
+/.idea
+/.vscode
+/.fleet
+
+# Archivos específicos de ambiente y de compilación
+Homestead.json
+Homestead.yaml

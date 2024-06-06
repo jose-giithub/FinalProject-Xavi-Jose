@@ -1,0 +1,287 @@
+header, header a, header i {
+  font-family: 'Tahoma', sans-serif;
+}
+a {
+  text-decoration: none;
+  /* me aseguro que se inporta esteos estilos */
+  color: white !important;
+}
+/* Estilos globales */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilos del header */
+header {
+  background-color: #222;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 1px 20px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Sombras ligeras para dar profundidad */
+}
+
+/* Estilos para el contenedor del logo */
+.logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+  width: auto;
+}
+
+.logo-container img {
+  max-width: 100%; /* Asegura que la imagen se mantenga dentro de su contenedor */
+  height: auto;
+}
+
+/* Estilos para la navegación */
+.navigation {
+  flex: 1; /* Ocupa el doble de espacio que los contenedores de imagen */
+  display: flex;
+  justify-content: center;
+  gap: 10px; /* Espacio entre los botones */
+  align-items: center;
+  flex-wrap: wrap;
+ 
+}
+
+/* contenedor de iconos */
+.navigation div {
+
+  padding: 10px 20px;
+  cursor: pointer;
+  text-align: center;
+  height: auto;
+  width: 25%;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 20px;
+}
+
+.navigation div i {
+  /* Más grandes */
+  font-size: 20px;
+}
+
+.navigation div:hover {
+  background-color: rgba(80, 78, 78, 0.582);
+  color: black;
+}
+
+.navigation p {
+  margin: 5px 0 0 0;
+  font-size: 18px;
+}
+/***************** Estilos para el buscador***************************** */
+.divPadreBuscador {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-right: 20px;
+  gap: 10px; /* Espacio entre el label y el input */
+}
+
+.labelBuscador {
+  font-size: 18px; /* Mismo tamaño que el texto de la navegación */
+}
+
+.divIconoBuscador {
+  display: flex;
+  align-items: center;
+}
+
+.divIconoBuscador i {
+  font-size: 25px; /* Mismo tamaño que los iconos de la navegación */
+  margin-right: 5px;
+}
+
+.divIconoBuscador input {
+  padding: 5px 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+/* Estilos para el contenedor de imagen de usuario */
+.user-image-container {
+  flex: 2; /* Ocupa el espacio disponible de forma proporcional */
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-right: 20px;
+}
+
+.user-image-container img {
+  border-radius: 50%; /* Hace la imagen redonda */
+  max-width: 50px; /* Tamaño máximo de la imagen */
+  height: auto;
+}
+
+.divIconsUser {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: #f0f0f0; /* Coincide con el fondo del header */
+}
+
+.divIconsUser i {
+  font-size: 25px;
+  color: #000;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1200px) {
+  .navigation {
+      justify-content: center;
+      gap: 20px;
+  }
+  .navigation div {
+      padding: 10px 15px;
+  }
+  .navigation p {
+      font-size: 16px;
+  }
+  .divPadreBuscador {
+    margin-right: 10px;
+}
+}
+
+@media (max-width: 992px) {
+  header {
+      flex-direction: column;
+      align-items: flex-start;
+  }
+  .navigation {
+      width: 100%;
+      justify-content: center;
+      gap: 10px;
+  }
+  .navigation div {
+      padding: 8px 12px;
+  }
+  .navigation p {
+      font-size: 14px;
+  }
+  .user-image-container {
+      justify-content: center;
+      margin-right: 0;
+  }
+  .user-image-container img {
+      max-width: 40px;
+  }
+  .divIconsUser {
+      width: 40px;
+      height: 40px;
+  }
+  .divIconsUser i {
+      font-size: 20px;
+  }
+  .divPadreBuscador {
+    width: 100%;
+    justify-content: center;
+    margin: 10px 0;
+}
+.divIconoBuscador input {
+    width: 80%;
+}
+}
+
+@media (max-width: 768px) {
+  header {
+      flex-direction: column;
+      align-items: center;
+  }
+  .logo-container img {
+      max-height: 50px;
+  }
+  .navigation {
+      width: 100%;
+      flex-direction: column;
+      align-items: center;
+      gap: 5px;
+  }
+  .navigation div {
+      padding: 5px 10px;
+  }
+  .navigation div i {
+      font-size: 20px;
+  }
+  .navigation p {
+      font-size: 12px;
+  }
+  .user-image-container img {
+      max-width: 30px;
+  }
+  .divIconsUser {
+      width: 30px;
+      height: 30px;
+  }
+  .divIconsUser i {
+      font-size: 15px;
+  }
+  .divPadreBuscador {
+    width: 100%;
+    justify-content: center;
+    margin: 10px 0;
+}
+.divIconoBuscador input {
+    width: 100%;
+}
+}
+
+@media (max-width: 576px) {
+
+  .navigation div {
+      padding: 3px 5px;
+  }
+  .navigation div i {
+      font-size: 20px;
+  }
+  .navigation p {
+      font-size: 18px;
+  }
+  .user-image-container img {
+      max-width: 25px;
+  }
+  .divIconsUser {
+      width: 25px;
+      height: 25px;
+  }
+  .divIconsUser i {
+      font-size: 20px;
+  }
+  .divPadreBuscador {
+    width: 100%;
+    justify-content: center;
+    margin: 5px 0;
+}
+.divIconoBuscador input {
+    width: 100%;
+}
+}
+
+/* Ajuste adicional para centrar los iconos en pantallas grandes */
+.navigation {
+  justify-content: center; /* Asegura que los iconos estén centrados */
+}
+
+@media (min-width: 1200px) {
+  .navigation {
+      justify-content: center; /* Centrar la navegación en pantallas grandes */
+  }
+  .navigation div {
+      padding: 10px 15px; /* Ajusta el padding de los iconos */
+      margin-left: 0; /* Quita margen adicional para centrar los iconos */
+  }
+  .navigation p {
+      font-size: 18px; /* Ajusta el tamaño de la fuente del texto */
+  }
+}

@@ -1,0 +1,57 @@
+/* Estilos footer */
+.site-footer {
+    background-color: #222;
+    color: #fff;
+    text-align: center !important;
+    padding: 20px 0;
+    margin-top: 20px;
+}
+
+.footer-content {
+    display: flex!important;
+    justify-content: space-around!important;
+    align-items: flex-start!important;
+    padding: 20px;
+    flex-wrap: wrap!important;
+}
+
+.footer-section {
+    flex: 1!important;
+    min-width: 200px!important;
+}
+
+.footer-section h5 {
+    color: #ffd700;
+    /* dorado */
+    margin-bottom: 15px!important;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-links li a:hover {
+    text-decoration: underline;
+}
+
+.social-icons a {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.social-icons i {
+    color: #fff;
+    font-size: 24px;
+}
+
+.footer-bottom {
+    border-top: 1px solid #444;
+    padding-top: 10px;
+    font-size: 14px;
+}

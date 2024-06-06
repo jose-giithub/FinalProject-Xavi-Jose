@@ -1,0 +1,331 @@
+/* resources/css/EstilosWelcome.css */
+
+body {
+    font-family: 'Figtree', sans-serif;
+    background-color: hsl(60, 56%, 91%);
+    color: black;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    width: calc(50% - 20px); /* Ajuste para que quepan dos tarjetas por fila */
+    flex: 0 0 auto; /* Para el scroll horizontal */
+}
+
+.card-destacado {
+    border: 2px solid #FFD700; /* Destacar con un borde dorado */
+    background-color: #f9f9e6; /* Fondo ligeramente diferente */
+    width: calc(50% - 20px); /* Los destacados son más grandes */
+    flex: 0 0 auto; /* Para el scroll horizontal */
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+    width: 100%;
+    height: 150px; /* Reducimos la altura para que las tarjetas sean más compactas */
+    object-fit: cover;
+}
+
+.card-body {
+    padding: 15px;
+    text-align: center;
+}
+
+.card-title {
+    font-size: 1.2em;
+    margin-bottom: 5px;
+    color: #222;
+}
+
+.card-text {
+    font-size: 0.9em;
+    color: #555;
+}
+
+.main-content {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.content-left {
+    width: 60%;
+}
+
+.content-right {
+    width: 35%;
+    position: sticky;
+    top: 20px;
+    height: 100vh;
+}
+
+.map-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+#map {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.talleres-destacados {
+    display: flex;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+    margin-bottom: 40px; /* Añadir más espacio debajo de los talleres destacados */
+    padding-bottom: 10px; /* Añadir relleno para separar visualmente */
+    border-bottom: 1px solid #ccc; /* Línea divisoria */
+}
+
+.talleres-destacados::-webkit-scrollbar {
+    height: 6px;
+}
+
+.talleres-destacados::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 3px;
+}
+
+.talleres-todos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-top: 20px; /* Añadir espacio superior para separar de los destacados */
+}
+
+.search-form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.search-group {
+    display: flex;
+    align-items: center;
+    margin: 5px;
+}
+
+.search-input {
+    flex-grow: 1;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+    font-size: 16px;
+    margin-right: 10px;
+    width: auto;
+}
+
+.search-button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.search-button:hover {
+    background-color: #0056b3;
+}
+
+.title-container {
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.8); /* Fondo blanco semitransparente */
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.title-container h2 {
+    margin: 0;
+    font-size: 1.5em;
+    color: #222;
+}
+
+.info-button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #28a745; /* Color verde diferente de los demás botones */
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.info-button:hover {
+    background-color: #218838;
+}
+
+.info-modal {
+    display: none; /* Ocultar el modal por defecto */
+    position: fixed;
+    z-index: 1000; /* Asegurarse de que el modal esté en el frente */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro semitransparente */
+}
+
+.info-modal-content {
+    background-color: #fff;
+    margin: 15% auto; /* Centrar verticalmente */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Ancho del modal */
+    max-width: 600px; /* Ancho máximo del modal */
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.close-info-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.close-info-button:hover {
+    background-color: #0056b3;
+}
+
+@media (max-width: 1024px) {
+    .content-left {
+        width: 100%;
+    }
+
+    .content-right {
+        display: none; /* Ocultamos el mapa en pantallas medianas y pequeñas */
+    }
+
+    .card {
+        width: calc(50% - 20px); /* Dos tarjetas por fila en pantallas medianas */
+    }
+
+    .card-destacado {
+        width: calc(100% - 20px); /* Los destacados ocupan toda la fila */
+    }
+}
+
+@media (max-width: 768px) {
+    .card {
+        width: calc(100% - 20px); /* Una tarjeta por fila en pantallas pequeñas */
+    }
+
+    .card-destacado {
+        width: calc(100% - 20px); /* Los destacados ocupan toda la fila */
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        width: calc(100% - 20px); /* Una tarjeta por fila en pantallas muy pequeñas */
+    }
+
+    .card-destacado {
+        width: calc(100% - 20px); /* Los destacados ocupan toda la fila */
+    }
+
+    .card-body {
+        padding: 10px;
+    }
+
+    .card-title {
+        font-size: 1em;
+    }
+
+    .card-text {
+        font-size: 0.8em;
+    }
+}
+
+.site-footer {
+    background-color: #222;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: auto;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 200px;
+}
+
+.footer-section h5 {
+    color: #FFD700;
+    margin-bottom: 15px;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-links li a:hover {
+    text-decoration: underline;
+}
+
+.social-icons a {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.social-icons i {
+    color: #fff;
+    font-size: 24px;
+}
+
+.footer-bottom {
+    border-top: 1px solid #444;
+    padding-top: 10px;
+    font-size: 14px;
+}
